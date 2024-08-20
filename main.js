@@ -31,6 +31,8 @@ function clickBox(event) {
     let computedStyle = window.getComputedStyle(box);
     let selectedColor = computedStyle.backgroundColor;
 
+    let changeTEst = test;
+
     console.log(`box ${box.id} was clicked`);
     console.log(`Selected color: ${selectedColor}`);
 
