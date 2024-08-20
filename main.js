@@ -1,5 +1,5 @@
 let CONTEXT;
-let isDrawing = null;
+let ISDRAWING = null;
 
 function createEventListeners() {
     console.log("Entering create event listeners function");
@@ -42,7 +42,7 @@ function clickBox(event) {
 function mouseDown(event) {
     console.log("Entering mouseDown function");
 
-    isDrawing = true;
+    ISDRAWING = true;
 
     CONTEXT.beginPath();
     CONTEXT.moveTo(event.offsetX, event.offsetY);
@@ -51,7 +51,7 @@ function mouseDown(event) {
 }
 
 function mouseMove(event) {
-    if (isDrawing) {
+    if (ISDRAWING) {
         CONTEXT.lineTo(event.offsetX, event.offsetY);
         CONTEXT.stroke();
     }
@@ -61,7 +61,7 @@ function mouseUp(event) {
     console.log("Entering mouseUp function");
 
     CONTEXT.stroke();
-    isDrawing = false;
+    ISDRAWING = false;
 
     console.log("Exiting mouseUp function");
 }
